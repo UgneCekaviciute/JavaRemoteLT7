@@ -1,0 +1,3 @@
+Laba diena,
+Mano vardas Ugnė,
+Mokomės skaityti iš duomenų failo
