@@ -10,7 +10,10 @@ public class Main {
             // mūsų atveju this bus car1 maxSpeed = 150,
             //o object bus car2 maxSpeed = 50. 150-50>0 todėl if sąlyga tenkinama
         } //galima lyginti ir du parametrus, bet antro parametro, pvz weight lyginimui
-        // turi būti sukurtas kitas metodas compareWeight, o objektas turi būti su dviem parametrais
-        // maxSpeed ir weight. Tada compareTo lygins greičius, o compareWeight svorius
+        // turi būti sukurtas kitas metodas Car klasėje compareWeight
+        // public int compareWeight(Car object){return this.weight - object.weight;}
+        // , o objektas turi būti su dviem parametrais maxSpeed ir weight.
+        // public Car (int maxSpeed, int weight) {this.maxSpeed = maxSpeed; this.weight = weight;}
+        // Tada compareTo lygins greičius, o compareWeight svorius
     }
 }
