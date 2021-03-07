@@ -4,6 +4,8 @@ import fundamentals_testing.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class AssertionExamples {
     //kuriamas testinis metodas, tikrinantis Calculator klasės sudėties metodą
     @Test
@@ -17,7 +19,7 @@ public class AssertionExamples {
         //then
         //kviečiame AssertEquals metodą
         // Assertions.assertEquals(3, result); mes test failed
-        Assertions.assertEquals(120, result); //testas bus praeitas
+        assertEquals(120, result); //testas bus praeitas
     }
     @Test //testas, tikrinantis atimtį
     public void testCalculatorSubtraction() {
@@ -26,7 +28,7 @@ public class AssertionExamples {
         //when
         int result = calculator.subtract(5, 115);
         //then
-        Assertions.assertEquals(-110, result); //testas bus praeitas
+        assertEquals(-110, result); //testas bus praeitas
     }
     @Test //testas tikrinantis daugybą
     public void testCalculatorMultiplication() {
@@ -35,7 +37,7 @@ public class AssertionExamples {
         //when
         int result = calculator.multiply(2, 5);
         //then
-        Assertions.assertEquals(10, result); //testas bus praeitas
+        assertEquals(10, result); //testas bus praeitas
     }
     @Test //testas tikrinantis dalybą
     public void testCalculatorDivision() {
@@ -44,7 +46,7 @@ public class AssertionExamples {
         //when
         int result = calculator.divide(25, 5);
         //then
-        Assertions.assertEquals(5, result); //testas bus praeitas
+        assertEquals(5, result); //testas bus praeitas
     }
     //tikrinam ar vienas skaičius lygus kitam
     @Test
@@ -55,8 +57,8 @@ public class AssertionExamples {
         //when
         boolean condition = firstNum == secondNum;
         //then
-        Assertions.assertTrue(firstNum != secondNum);
-        Assertions.assertFalse(condition);
+        assertTrue(firstNum != secondNum);
+        assertFalse(condition);
     }
     @Test
     public void testAssertNullOrNotNull() {
@@ -66,8 +68,8 @@ public class AssertionExamples {
         //when
         //nėra kaip kitaip tikrinti, tai nieko nerašom
         //then
-        Assertions.assertNull(emptyText);
-        Assertions.assertNotNull(text);
+        assertNull(emptyText);
+        assertNotNull(text);
     }
     //palyginam ar masyvai vienodi. Tikrina visas masyvo reikšmes
     @Test
@@ -79,7 +81,7 @@ public class AssertionExamples {
         //when
 
         //then
-        Assertions.assertArrayEquals(firstArr, secondArr);
+        assertArrayEquals(firstArr, secondArr);
     }
     //tikrinam ar vienodi String'ai
     @Test
@@ -91,7 +93,7 @@ public class AssertionExamples {
         //when
 
         //then
-        Assertions.assertSame(text1, text2);
-        Assertions.assertNotSame(text2, text3); //nesutaps adresai, todėl testas praeis
+        assertSame(text1, text2);
+        assertNotSame(text2, text3); //nesutaps adresai, todėl testas praeis
     }
 }
