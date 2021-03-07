@@ -46,4 +46,52 @@ public class AssertionExamples {
         //then
         Assertions.assertEquals(5, result); //testas bus praeitas
     }
+    //tikrinam ar vienas skaičius lygus kitam
+    @Test
+    public void testAssertTrueFalse() {
+        // given
+        int firstNum = 5;
+        int secondNum = 15;
+        //when
+        boolean condition = firstNum == secondNum;
+        //then
+        Assertions.assertTrue(firstNum != secondNum);
+        Assertions.assertFalse(condition);
+    }
+    @Test
+    public void testAssertNullOrNotNull() {
+        //given
+        String emptyText = null;
+        String text = "sekmadienis";
+        //when
+        //nėra kaip kitaip tikrinti, tai nieko nerašom
+        //then
+        Assertions.assertNull(emptyText);
+        Assertions.assertNotNull(text);
+    }
+    //palyginam ar masyvai vienodi. Tikrina visas masyvo reikšmes
+    @Test
+    public void testArrayEquals() {
+        //given
+        int[] firstArr = {1,2,3};
+        //int[] secondArr = {4,5,6}; //nesutaps
+        int[] secondArr = {1,2,3};
+        //when
+
+        //then
+        Assertions.assertArrayEquals(firstArr, secondArr);
+    }
+    //tikrinam ar vienodi String'ai
+    @Test
+    public void testSameOrNotSame() {
+        //given
+        String text1 = "abc"; //String pool
+        String text2 = "abc"; //String pool
+        String text3 = new String("abc"); //ši reikšmė ne String pool'e, o heap'e
+        //when
+
+        //then
+        Assertions.assertSame(text1, text2);
+        Assertions.assertNotSame(text2, text3); //nesutaps adresai, todėl testas praeis
+    }
 }
