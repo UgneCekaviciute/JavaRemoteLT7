@@ -44,6 +44,6 @@ public class AssertionExamples {
         //when
         int result = calculator.divide(25, 5);
         //then
-        Assertions.assertEquals(6, result); //testas bus praeitas
+        Assertions.assertEquals(5, result); //testas bus praeitas
     }
 }
